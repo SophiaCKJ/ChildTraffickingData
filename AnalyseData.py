@@ -1,7 +1,15 @@
 print('Welcome to Analyse Data!')
-import pandas as pd
-# the path to my excel file
+
+def read_csv_file(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    data = []
+    for line in lines:
+        row = line.strip().split(',')
+        data.append(row)
+    return data
+
 file_path = 'data_glotip.csv'
-# function to find (because i told it to) and read the data in the excel spreadsheet
-data = pd.read_csv(file_path)
-print(data.head())
+data = read_csv_file(file_path)
+
+print(data[30000])
