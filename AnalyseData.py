@@ -12,4 +12,10 @@ def read_csv_file(file_path):
 file_path = 'data_glotip.csv'
 data = read_csv_file(file_path)
 
-print(data[30000])
+print("Headers:", data[0])
+print("First Data Row:", data[1])
+print("Second Data Row:", data[2])
+
+cleaned_data = data[2:]
+print("Headers:", cleaned_data[0])
+print("First Data Row:", cleaned_data[1])
